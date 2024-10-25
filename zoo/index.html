@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite + TS</title>
+  </head>
+  <body>
+    <main>
+      <div class="forms-wrapper">
+        <div class="input-wrapper">
+          <h3>Emloyees</h3>
+          <input type="text" placeholder="Name" id="employee-name" />
+          <input type="submit" value="Add Employee" id="add-employee" />
+        </div>
+        <div class="input-wrapper">
+          <h3>Animals</h3>
+          <input type="text" placeholder="name" id="animal-name" />
+          <input type="text" placeholder="age" id="animal-age" />
+          <select name="type" id="animal-type">
+            <option value="">Select animal type</option>
+          </select>
+          <input type="text" placeholder="Max speed" id="animal-maxspeed" />
+          <input type="text" placeholder="Origin" id="animal-origin" />
+          <input type="text" placeholder="Weight" id="animal-weight" />
+          <input type="submit" value="Add Animal" id="add-animal" />
+        </div>
+      </div>
+      <div class="lists-wrapper">
+        <div class="employee-list" id="employee-list"></div>
+        <div class="employee-list" id="animal-list"></div>
+      </div>
+      <div class="log-wrapper">
+        <h2>Logs list</h2>
+        <div class="log-table-wrapper">
+          <table class="log-table" , id="log-table">
+            <thead>
+              <tr>
+                <th scope="col">Log message</th>
+                <th scope="col">Date</th>
+              </tr>
+            </thead>
+            <tbody id="log-table-body"></tbody>
+          </table>
+        </div>
+      </div>
+    </main>
+    <dialog class="dialog-window" aria-label="message" id="dialog-window">
+      <h3 id="dialog-title">Error</h3>
+      <p id="dialog-text">Error message</p>
+      <button type="submit" onclick="window['dialog-window'].close()">
+        Ok
+      </button>
+    </dialog>
+    <dialog class="dialog-window" aria-label="message" id="dialog-action">
+      <h3 id="action-title">Action</h3>
+      <p id="action-text"></p>
+    </dialog>
+    <dialog class="dialog-window" aria-label="message" id="dialog-feed">
+      <h3 id="dialog-title">Select animal to feed</h3>
+      <ul id="feed-list"></ul>
+    </dialog>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
